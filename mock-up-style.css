@@ -1,0 +1,164 @@
+
+/* deux polices importées depuis fontsquirrel*/
+@font-face {
+    font-family: 'alegreya_scregular';
+    src: url('fonts/alegreyasc-regular-webfont.woff2') format('woff2'),
+         url('fonts/alegreyasc-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'quicksandlight';
+    src: url('fonts/quicksand-light-webfont.woff2') format('woff2'),
+         url('fonts/quicksand-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* je n'ai pas utilisé Bootstrap pour permettre 
+une meilleure prise en main du CSS
+Les couleurs ont été récupérées via photoshop du mock-up
+donné en exemple */
+
+/* code CSS des grandes parties*/
+
+body{
+font-family:'quicksandlight',Arial;
+display: flex;
+flex-direction: column;
+
+color: rgb(0,51,102);
+height: 100%;
+align-items: stretch;
+justify-content: space-between;
+
+}
+
+header{
+	background-color: rgb(116,81,235);
+	
+	padding-left: 10%;
+	padding-top: 5%;
+	padding-right: 5%;
+	padding-bottom: 5%;
+
+	
+
+}	
+
+section{
+	display: flex;
+	align-items: stretch;
+	padding-left: 6%;
+	padding-top: 5%;
+	padding-bottom:5%;
+	
+	
+}
+
+footer{
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(0,54,104);
+	padding-left: 10%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	align-items: left;
+
+}
+
+
+/*code CSS des sous-balises*/
+
+h1{
+	
+	color: white;
+	font-size: 2em;
+	font-family: 'alegreya_scregular',Arial;
+
+
+}
+
+em{
+	background-color: rgb(0,237,162);
+	font-style: normal;
+	color: rgb(0,51,102);
+	font-size: 1.2em;
+	font-family: 'quicksandlight',Arial;
+	
+}
+
+h2{
+	font-family: 'quicksandlight',Arial;
+font-weight: bold;
+font-size: 1.3em;
+
+}
+p, ul{
+	
+	font-size: 0.8em;
+	font-weight: bold;
+
+}
+
+/*code html de classes spécifiques */
+
+
+.photoprofil{
+	float: right;
+
+}
+.intro{
+	color: white;
+	font-size: 1em;
+}
+
+.logo{
+
+	text-align: center;
+	flex:1;
+}
+
+#competences{
+	flex: 3;
+	padding-left: 8%;
+	padding-right: 10%;	
+}	
+
+
+.couleur{
+	color: white;
+	
+}
+
+
+#listereseau img{
+	height: 40px;
+	width: 40px;
+}
+
+/* code html responsive pour le breaking point <800 px */
+
+@media screen and (max-width: 800px){
+
+
+	.photoprofil{
+		float : left;
+	}
+	/*permet de laisser de l'espace entre la photo et la 
+	description lorsqu'elle passe à gauche*/
+	header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	/* permet au logo d'être en dessous des compétences*/
+	section {
+		flex-direction: column-reverse;
+	}
+
+}
